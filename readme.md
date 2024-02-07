@@ -1,7 +1,7 @@
-_Yes, it’s going to be challenging.
+_Yes, it’s going to be challenging._
 
-But it’s also going to be fun.
+_But it’s also going to be fun._
 
-And it might even be life changing, too.
+_And it might even be life changing, too._
 
-What are you waiting for?_
+_What are you waiting for?_
