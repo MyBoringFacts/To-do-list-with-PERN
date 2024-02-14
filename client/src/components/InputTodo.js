@@ -9,26 +9,50 @@ const InputTodo = () =>{
 
     const onSubmitFormm = async (e) => {
         e.preventDefault ();
-        try{
-            const body = {description};
-            const response = fetch("http://localhost:5000/todos",{
-                method : "POST",
+        if (description && description.trim() !== "") {
+        
+            try{
+                const body = {description};
+                // const response = fetch("http://localhost:5000/todos",{
+                //     method : "POST",
+                //     headers: {
+                //         "Content-Type": "application/json"},
+                //     body: JSON.stringify(body)
+                //     }
+                // );
+                // if (response.ok) {
+                //     // Clear the input field
+                //     setDescription("");
+                    
+                    
+                //     window.location.reload();
+                //   } else {
+                //     console.error("Failed to add todo");
+                //   }
+                fetch("http://localhost:5000/todos", {
+                method: "POST",
                 headers: {
-                    "Content-Type": "application/json"},
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(body)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Clear the input field
+                    setDescription("");
+
+                    // Reload the page to show the latest data
+                    window.location.reload();
+                } else {
+                    console.error("Failed to add todo");
                 }
-            );
-            if (response.ok) {
-                // Clear the input field
-                setDescription("");
-                
-                // Redirect to the root URL
-                window.location.href = "/";
-              } else {
-                console.error("Failed to add todo");
-              }
-        }catch (err) {
-            console.error(err.message);
+            })
+            .catch(err => console.error(err.message));
+            }catch (err) {
+                console.error(err.message);
+            }
+        }else{
+            console.error("Description cannot be Null")
         }
 
     }

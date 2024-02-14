@@ -14,7 +14,7 @@ function App() {
   return  (
   <Fragment>
     <div  className='container'>
-    <InputTodo></InputTodo>
+    <InputTodo />
     <ListTodo></ListTodo>
     </div>
   </Fragment>)
