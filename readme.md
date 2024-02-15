@@ -1,4 +1,4 @@
-_this is a todo List using Postgresql, Express.js, React and Node.js
+_This is a todo List using Postgresql, Express.js, React and Node.js_
 
 My 2nd todo list.
 
