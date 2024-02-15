@@ -1,7 +1,5 @@
-_Yes, it’s going to be challenging._
+_this is a todo List using Postgresql, Express.js, React and Node.js
 
-_But it’s also going to be fun._
+My 2nd todo list.
 
-_And it might even be life changing, too._
-
-_What are you waiting for?_
+Page UI is not the best, But the page is functional . 
